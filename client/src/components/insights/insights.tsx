@@ -3,6 +3,7 @@ import { cx } from "../../lib/cx.ts";
 import styles from "./insights.module.css";
 import type { Insight } from "../../schemas/insight.ts";
 import { useDeleteInsight } from "../../hooks/useDeleteInsight.ts";
+import { getBrandName } from "../../lib/consts.ts";
 
 type InsightsProps = {
   insights: Insight[];
@@ -21,7 +22,7 @@ export const Insights = ({ insights, className }: InsightsProps) => {
             insights.map(({ id, text, createdAt, brandId }) => (
               <div className={styles.insight} key={id}>
                 <div className={styles["insight-meta"]}>
-                  <span>{brandId}</span>
+                  <span>{getBrandName(brandId)}</span>
                   <div className={styles["insight-meta-details"]}>
                     <span>{createdAt.toString()}</span>
                     <Trash2Icon
