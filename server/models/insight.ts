@@ -3,8 +3,11 @@ import { z } from "zod";
 export const Insight = z.object({
   id: z.number().int().min(0),
   brand: z.number().int().min(0),
-  createdAt: z.date(),
+  createdAt: z.coerce.date(),
   text: z.string(),
 });
 
+export const InsightCreate = Insight.omit({ id: true });
+
 export type Insight = z.infer<typeof Insight>;
+export type InsightCreate = z.infer<typeof InsightCreate>;
