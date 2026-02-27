@@ -8,7 +8,7 @@ describe("creating insights in the database", () => {
   describe("single insight", () => {
     withDB((fixture) => {
       const insightCreate: InsightCreate = {
-        brand: 1,
+        brandId: 1,
         createdAt: new Date("2026-02-27T00:00:00.000Z"),
         text: "Test insight",
       };
@@ -32,7 +32,7 @@ describe("creating insights in the database", () => {
         expect(all).toHaveLength(1);
         expect(all[0]).toMatchObject({
           id: 1,
-          brand: 1,
+          brandId: 1,
           text: "Test insight",
         });
       });
@@ -48,7 +48,7 @@ describe("creating insights in the database", () => {
         first = createInsight({
           ...fixture,
           insight: {
-            brand: 0,
+            brandId: 0,
             createdAt: new Date(),
             text: "First",
           },
@@ -56,7 +56,7 @@ describe("creating insights in the database", () => {
         second = createInsight({
           ...fixture,
           insight: {
-            brand: 2,
+            brandId: 2,
             createdAt: new Date(),
             text: "Second",
           },

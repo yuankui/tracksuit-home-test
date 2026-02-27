@@ -6,4 +6,4 @@ const UInt16 = z
   .min(0)
   .max(Math.pow(2, 16) - 1);
 
-export const Port = z.coerce.number().pipe(UInt16);
+export const Port: z.ZodType<number> = z.coerce.number().pipe(UInt16);

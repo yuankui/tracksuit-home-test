@@ -1,7 +1,7 @@
 import { Insight } from "./insight.ts";
 import { expect, it } from "vitest";
 
-it("should parse the insights", async () => {
+it("should parse the insights", () => {
   const json = [
     {
       "id": 1,

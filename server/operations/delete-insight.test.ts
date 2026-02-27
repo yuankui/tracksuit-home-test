@@ -14,7 +14,7 @@ describe("deleting insights from the database", () => {
         created = createInsight({
           ...fixture,
           insight: {
-            brand: 1,
+            brandId: 1,
             createdAt: new Date(),
             text: "To be deleted",
           },
@@ -45,9 +45,9 @@ describe("deleting insights from the database", () => {
   describe("one of multiple insights", () => {
     withDB((fixture) => {
       const insights: Insight[] = [
-        { id: 1, brand: 0, createdAt: new Date(), text: "First" },
-        { id: 2, brand: 1, createdAt: new Date(), text: "Second" },
-        { id: 3, brand: 2, createdAt: new Date(), text: "Third" },
+        { id: 1, brandId: 0, createdAt: new Date(), text: "First" },
+        { id: 2, brandId: 1, createdAt: new Date(), text: "Second" },
+        { id: 3, brandId: 2, createdAt: new Date(), text: "Third" },
       ];
 
       beforeAll(() => {

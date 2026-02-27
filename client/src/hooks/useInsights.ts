@@ -7,7 +7,7 @@ export const useInsights = () => {
     queryFn: async (): Promise<Insight[]> => {
       const res = await fetch(`/api/insights`);
       const json = await res.json();
-      const list = json.map((e: any) => Insight.parse(e));
+      const list = json.map((e: unknown) => Insight.parse(e));
       return list;
     },
   });
