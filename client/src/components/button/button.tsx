@@ -9,12 +9,7 @@ type ButtonProps = {
   theme?: "primary" | "secondary";
 } & ComponentProps<"button">;
 
-export const Button = ({
-  label,
-  theme = "primary",
-  className,
-  ...props
-}: ButtonProps) => {
+export const Button = ({ label, theme = "primary", className, ...props }: ButtonProps) => {
   return (
     <button className={cx(styles.button, styles[theme], className)} {...props}>
       {label}

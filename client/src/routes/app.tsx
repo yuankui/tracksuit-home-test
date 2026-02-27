@@ -1,20 +1,16 @@
-import { useEffect, useState } from "react";
 import { Header } from "../components/header/header.tsx";
 import { Insights } from "../components/insights/insights.tsx";
 import styles from "./app.module.css";
-import type { Insight } from "../schemas/insight.ts";
+import { useInsights } from "../hooks/useInsights.ts";
 
 export const App = () => {
-  const [insights, setInsights] = useState<Insight>([]);
+  const { data: insights } = useInsights();
 
-  useEffect(() => {
-    fetch(`/api/insights`).then((res) => setInsights(res.json()));
-  }, []);
-
+  console.log(insights);
   return (
     <main className={styles.main}>
       <Header />
-      <Insights className={styles.insights} insights={insights} />
+      <Insights className={styles.insights} insights={insights ?? []} />
     </main>
   );
 };

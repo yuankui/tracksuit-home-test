@@ -9,6 +9,7 @@
   "imports": {
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.2",
     "@fontsource-variable/quicksand": "npm:@fontsource-variable/quicksand@^5.1.0",
+    "@tanstack/react-query": "npm:@tanstack/react-query@^5.90.21",
     "@testing-library/dom": "npm:@testing-library/dom@^10.4.0",
     "@testing-library/jest-dom": "npm:@testing-library/jest-dom@^6.6.3",
     "@testing-library/react": "npm:@testing-library/react@^16.1.0",

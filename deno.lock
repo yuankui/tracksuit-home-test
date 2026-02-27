@@ -15,6 +15,7 @@
     "jsr:@std/data-structures@^1.0.10": "1.0.10",
     "jsr:@std/encoding@1": "1.0.10",
     "jsr:@std/encoding@^1.0.10": "1.0.10",
+    "jsr:@std/expect@*": "1.0.18",
     "jsr:@std/expect@^1.0.8": "1.0.18",
     "jsr:@std/fmt@1": "1.0.9",
     "jsr:@std/fs@1": "1.0.23",
@@ -26,12 +27,15 @@
     "jsr:@std/path@1": "1.1.4",
     "jsr:@std/path@^1.0.8": "1.1.4",
     "jsr:@std/path@^1.1.4": "1.1.4",
+    "jsr:@std/testing@*": "1.0.17",
     "jsr:@std/testing@^1.0.5": "1.0.17",
     "npm:@deno/vite-plugin@^1.0.2": "1.0.6_vite@6.4.1__picomatch@4.0.3",
     "npm:@fontsource-variable/quicksand@^5.1.0": "5.2.10",
+    "npm:@tanstack/react-query@^5.90.21": "5.90.21_react@19.2.4",
     "npm:@testing-library/dom@^10.4.0": "10.4.1",
     "npm:@testing-library/jest-dom@^6.6.3": "6.9.1",
     "npm:@testing-library/react@^16.1.0": "16.3.2_@testing-library+dom@10.4.1_@types+react@19.2.14_react@19.2.4_react-dom@19.2.4__react@19.2.4",
+    "npm:@types/react@19.0.2": "19.0.2",
     "npm:@types/react@^19.0.2": "19.2.14",
     "npm:@vitejs/plugin-react@^4.3.4": "4.7.0_vite@6.4.1__picomatch@4.0.3_@babel+core@7.29.0",
     "npm:framer-motion@^11.15.0": "11.18.2_react@19.2.4_react-dom@19.2.4__react@19.2.4",
@@ -41,7 +45,9 @@
     "npm:react-dom@19": "19.2.4_react@19.2.4",
     "npm:react@19": "19.2.4",
     "npm:sanitize.css@13": "13.0.0",
+    "npm:vite@*": "6.4.1_picomatch@4.0.3",
     "npm:vite@^6.0.3": "6.4.1_picomatch@4.0.3",
+    "npm:vitest@*": "3.2.4_jsdom@25.0.1_vite@6.4.1__picomatch@4.0.3",
     "npm:vitest@^3.0.2": "3.2.4_jsdom@25.0.1_vite@6.4.1__picomatch@4.0.3",
     "npm:zod@^3.23.8": "3.25.76"
   },
@@ -536,6 +542,16 @@
     "@rollup/rollup-win32-x64-msvc@4.59.0": {
       "integrity": "sha512-2HRCml6OztYXyJXAvdDXPKcawukWY2GpR5/nxKp4iBgiO3wcoEGkAaqctIbZcNB6KlUQBIqt8VYkNSj2397EfA=="
     },
+    "@tanstack/query-core@5.90.20": {
+      "integrity": "sha512-OMD2HLpNouXEfZJWcKeVKUgQ5n+n3A2JFmBaScpNDUqSrQSjiveC7dKMe53uJUg1nDG16ttFPz2xfilz6i2uVg=="
+    },
+    "@tanstack/react-query@5.90.21_react@19.2.4": {
+      "integrity": "sha512-0Lu6y5t+tvlTJMTO7oh5NSpJfpg/5D41LlThfepTixPYkJ0sE2Jj0m0f6yYqujBwIXlId87e234+MxG3D3g7kg==",
+      "dependencies": [
+        "@tanstack/query-core",
+        "react"
+      ]
+    },
     "@testing-library/dom@10.4.1": {
       "integrity": "sha512-o4PXJQidqJl82ckFaXUeoAW+XysPLauYI43Abki5hABd853iMhitooc6znOnczgbTYmEP6U6/y1ZyKAIsvMKGg==",
       "dependencies": [
@@ -565,7 +581,7 @@
       "dependencies": [
         "@babel/runtime",
         "@testing-library/dom",
-        "@types/react",
+        "@types/react@19.2.14",
         "react",
         "react-dom"
       ]
@@ -614,6 +630,12 @@
     },
     "@types/estree@1.0.8": {
       "integrity": "sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w=="
+    },
+    "@types/react@19.0.2": {
+      "integrity": "sha512-USU8ZI/xyKJwFTpjSVIrSeHBVAGagkHQKPNbxeWwql/vDmnTIBgx+TJnhFnj1NXgz8XfprU0egV2dROLGpsBEg==",
+      "dependencies": [
+        "csstype"
+      ]
     },
     "@types/react@19.2.14": {
       "integrity": "sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==",
@@ -1395,6 +1417,7 @@
         "dependencies": [
           "npm:@deno/vite-plugin@^1.0.2",
           "npm:@fontsource-variable/quicksand@^5.1.0",
+          "npm:@tanstack/react-query@^5.90.21",
           "npm:@testing-library/dom@^10.4.0",
           "npm:@testing-library/jest-dom@^6.6.3",
           "npm:@testing-library/react@^16.1.0",
